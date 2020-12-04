@@ -1,0 +1,10 @@
+{
+    "name": "drupal/newsletter_mailjet",
+    "description": "Provides Mailjet integration for the newsletter subscription.",
+    "type": "drupal-module",
+    "require": {
+        "php": ">=7.3",
+        "drupal/newsletter_subscription": "dev-master",
+        "mailjet/mailjet-apiv3-php": "^1.5"
+    }
+}

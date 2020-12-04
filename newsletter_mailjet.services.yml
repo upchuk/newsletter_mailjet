@@ -1,0 +1,9 @@
+services:
+  newsletter_mailjet.client:
+    class: Drupal\newsletter_mailjet\Mailjet
+    arguments: ['@logger.factory']
+  newsletter_mailjet.subscriber:
+    class: Drupal\newsletter_mailjet\MailjetSubscriber
+    arguments: ['@newsletter_mailjet.client', '@logger.factory', '@messenger']
+    tags:
+      - { name: newsletter_subscriber }
