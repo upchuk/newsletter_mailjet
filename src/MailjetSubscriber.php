@@ -71,6 +71,6 @@ class MailjetSubscriber implements NewsletterSubscriberInterface {
       return;
     }
 
-    $this->messenger->addStatus('Thank you for subscribing to our newsletter.');
+    $this->messenger->addStatus($this->t('Thank you for subscribing to our newsletter.'));
   }
 }
