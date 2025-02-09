@@ -35,7 +35,7 @@ class Mailjet {
     }
 
     $credentials = Settings::get('mailjet');
-    $this->client = new Client($credentials['key'], $credentials['secret'], ['version' => 'v3']);
+    $this->client = new Client($credentials['key'], $credentials['secret'], true, ['version' => 'v3']);
     $this->logger = $loggerChannelFactory->get('mailjet');
   }
 
