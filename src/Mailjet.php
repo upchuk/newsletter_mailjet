@@ -33,7 +33,6 @@ class Mailjet {
     if (!Settings::get('mailjet')) {
       throw new \Exception('Mailjet is not configured.');
     }
-
     $credentials = Settings::get('mailjet');
     $this->client = new Client($credentials['key'], $credentials['secret'], true, ['version' => 'v3']);
     $this->logger = $loggerChannelFactory->get('mailjet');
